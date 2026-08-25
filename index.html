@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claim Your $500 Target Gift Card | Free US Offer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #FCFBF6;
+      --card: #FFFFFF;
+      --border: #ECE9DF;
+      --text: #2A2521;
+      --muted: #8C877D;
+      --accent: #CC0000;
+      --accent-hover: #B00000;
+      --tp-green: #00B67A;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Outfit', ui-sans-serif, system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* ── Top trust banner ───────────────────── */
+    .top-banner {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 13px 16px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    /* ── Brand hero ─────────────────────────── */
+    .hero {
+      padding: 32px 24px 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .bullseye {
+      position: relative;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .bullseye::before { content:''; width: 28px; height: 28px; border-radius: 50%; background: var(--cream); }
+    .bullseye::after { content:''; position: absolute; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+
+    .wordmark {
+      font-size: 40px;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.01em;
+      line-height: 1;
+    }
+
+    .tagline {
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── Headline ───────────────────────────── */
+    .headline-wrap { padding: 24px 22px 22px; text-align: center; }
+    .headline {
+      font-size: 31px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.015em;
+      text-wrap: balance;
+      color: var(--text);
+    }
+    .headline em { font-style: normal; color: var(--accent); }
+
+    /* ── Steps ──────────────────────────────── */
+    .steps {
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 18px 22px;
+    }
+    .step-num {
+      width: 46px; height: 46px; min-width: 46px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 21px; font-weight: 800;
+    }
+    .step-label { font-size: 18px; font-weight: 600; color: var(--text); line-height: 1.25; }
+
+    /* ── CTA ────────────────────────────────── */
+    .cta-btn {
+      display: block;
+      margin: 26px 20px 0;
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 700;
+      padding: 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background 0.15s ease, transform 0.1s ease;
+      user-select: none;
+    }
+    .cta-btn:hover { background: var(--accent-hover); }
+    .cta-btn:active { transform: scale(0.99); }
+    .cta-btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+
+    .cta-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 18px 24px 6px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .cta-note svg { flex-shrink: 0; margin-top: 3px; }
+
+    /* ── FAQ ────────────────────────────────── */
+    .faq-wrap { padding: 26px 24px 8px; }
+    .faq-heading {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    details { border-bottom: 1px solid var(--border); }
+    summary {
+      padding: 20px 0;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text);
+      gap: 12px;
+      user-select: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .chev { transition: transform 0.2s ease; flex-shrink: 0; color: var(--muted); }
+    details[open] .chev { transform: rotate(180deg); }
+    .faq-body {
+      padding: 0 0 20px;
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── Footer ─────────────────────────────── */
+    footer {
+      margin-top: auto;
+      padding: 28px 24px 34px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .tp-row { display: flex; align-items: center; gap: 10px; }
+    .tp-label { font-size: 20px; font-weight: 800; color: var(--text); }
+    .tp-stars { display: flex; gap: 3px; }
+    .tp-star {
+      width: 30px; height: 30px;
+      background: var(--tp-green);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .tp-score { font-size: 20px; font-weight: 700; color: var(--text); }
+    .disclaimer {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.6;
+      max-width: 420px;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Top trust banner -->
+  <div class="top-banner">Trusted by 12,000+ US Shoppers · Already Claimed</div>
+
+  <!-- Brand hero -->
+  <div class="hero">
+    <div class="bullseye"></div>
+    <div class="wordmark">TARGET</div>
+    <div class="tagline">Helping families shop for less</div>
+  </div>
+
+  <!-- Headline -->
+  <div class="headline-wrap">
+    <h1 class="headline">Claim your <em>$500 Target gift card</em> and shop everything you love.</h1>
+  </div>
+
+  <!-- Steps -->
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-label">Click "Claim Now"</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-label">Enter your email and basic info</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-label">Complete 4–5 sponsored deals</div></div>
+    <div class="step"><div class="step-num">4</div><div class="step-label">Enjoy your $500 Target gift card!</div></div>
+  </div>
+
+  <!-- CTA -->
+  <a class="cta-btn" href="https://giftclick.org/aff_c?offer_id=317&aff_id=152526" rel="noopener">Claim Now</a>
+
+  <div class="cta-note">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="4" y="10" width="16" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 10V7a4 4 0 018 0v3" stroke="currentColor" stroke-width="2"/></svg>
+    <span>Safe, secure &amp; free to enter. Completion of sponsored deals required.</span>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-wrap">
+    <div class="faq-heading">Frequently Asked Questions</div>
+
+    <details>
+      <summary>How long do the deals take? <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="faq-body">Most deals take 2–5 minutes each. The full process typically takes 15–30 minutes to complete all required deals.</div>
+    </details>
+
+    <details>
+      <summary>What are deals? <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="faq-body">Deals are sponsored offers from our advertising partners — free trials, surveys, or sign-ups that our partners pay us to promote.</div>
+    </details>
+
+    <details>
+      <summary>How many deals do I have to do? <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="faq-body">You'll need to complete 4–5 deals to qualify. Each is clearly explained before you start, and most take just a few minutes.</div>
+    </details>
+
+    <details>
+      <summary>When will I receive my gift card? <svg class="chev" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="faq-body">After completing all required deals, your gift card is delivered to your email within 7–14 business days.</div>
+    </details>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="tp-row">
+      <span class="tp-label">Excellent</span>
+      <div class="tp-stars">
+        <span class="tp-star"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l3 6.5 7 .7-5.2 4.7 1.5 6.9L12 17.8 5.2 20.8l1.5-6.9L1.5 9.2l7-.7z"/></svg></span>
+        <span class="tp-star"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l3 6.5 7 .7-5.2 4.7 1.5 6.9L12 17.8 5.2 20.8l1.5-6.9L1.5 9.2l7-.7z"/></svg></span>
+        <span class="tp-star"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l3 6.5 7 .7-5.2 4.7 1.5 6.9L12 17.8 5.2 20.8l1.5-6.9L1.5 9.2l7-.7z"/></svg></span>
+        <span class="tp-star"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l3 6.5 7 .7-5.2 4.7 1.5 6.9L12 17.8 5.2 20.8l1.5-6.9L1.5 9.2l7-.7z"/></svg></span>
+        <span class="tp-star"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2l3 6.5 7 .7-5.2 4.7 1.5 6.9L12 17.8 5.2 20.8l1.5-6.9L1.5 9.2l7-.7z"/></svg></span>
+      </div>
+      <span class="tp-score">4.9 / 5</span>
+    </div>
+    <p class="disclaimer">This offer is not affiliated with, endorsed by, or sponsored by Target Corporation. Target is a registered trademark of its respective owner. Reward fulfillment requires completion of sponsored offers.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
